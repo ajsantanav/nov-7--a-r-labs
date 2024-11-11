@@ -38,11 +38,12 @@ function longStr(strArr) {
     let longestNum = 0;
     let longestStr
     for(let i = 0; i < strArr.length; i++) {
-        if(longest < strArr[i].length)
+        if(longestNum < strArr[i].length)
         {
             longestNum = strArr[i].length;
             longestStr = strArr[i];
         }
         
     }
+    return console.log(longestStr + " is the longest string for a total of " + longestNum + " letters");
 }
