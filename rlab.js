@@ -70,10 +70,6 @@ function nextPrime(x)
     }
 }
 
-function stringToTable(cvsString) {
-
-}
-
 function parseCsv(cvsString) {
     let word = '';
 
@@ -109,7 +105,9 @@ function arraySections(arr) {
         
             tempArr = []
         }
-        tempArr.push(arr[j])
+        else {
+            tempArr.push(arr[j])
+        }
         
         count++;
     }
@@ -134,6 +132,15 @@ function convertToObj() {
     }
     
 }
+function ageAverage(peopleData) {
+    let totalAge = 0;
+    for(let i = 0; i < peopleData.length; i++) {
+        totalAge += parseInt(peopleData[i].age);
+    }
+
+    let avgAge = totalAge / peopleData.length;
+    console.log("Average age is; " + avgAge);
+}
 
 parseCsv(cvsString);
 // console.log(arr);
@@ -141,6 +148,9 @@ arraySections(arr);
 // console.log(arr2);
 convertToObj(arr2);
 
+
 peopleData.unshift({ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+peopleData.splice(4);
 peopleData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 console.log(peopleData)
+ageAverage(peopleData);
