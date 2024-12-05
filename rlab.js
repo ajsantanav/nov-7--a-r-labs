@@ -29,10 +29,10 @@ function fizzBuzz (x) {
     }
 }
 let myMin = 1;
-let myMax = 100
+let myMax = 9000;
 let x = randomNumber();
 function randomNumber() {
-    let num = Math.floor(Math.random() * 10);
+    let num = Math.floor(Math.random() * 1000);
     return num;
 }
 
@@ -48,8 +48,8 @@ function isPrime(x) {
     else if(x == 2 || x == 5 || x == 3 || x == 7) {
         return true;
     }
-    //|| x % 5 == 0 || x % 7 == 0
-    else if(x % 2 == 0 || x % 3 == 0){
+    // || x % 7 == 0
+    else if(x % 2 == 0 || x % 3 == 0 || x % 5 == 0){
         return false;
     }
     else {
@@ -132,6 +132,7 @@ function convertToObj() {
     }
     
 }
+
 function ageAverage(peopleData) {
     let totalAge = 0;
     for(let i = 0; i < peopleData.length; i++) {
@@ -142,15 +143,14 @@ function ageAverage(peopleData) {
     console.log("Average age is; " + avgAge);
 }
 
-parseCsv(cvsString);
-// console.log(arr);
-arraySections(arr);
-// console.log(arr2);
-convertToObj(arr2);
+// parseCsv(cvsString);
+// // console.log(arr);
+// arraySections(arr);
+// // console.log(arr2);
+// convertToObj(arr2);
 
-
-peopleData.unshift({ id: "48", name: "Barry", occupation: "Runner", age: "25" });
-peopleData.splice(4);
-peopleData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
-console.log(peopleData)
-ageAverage(peopleData);
+// peopleData.unshift({ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+// peopleData.splice(4);
+// peopleData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+// console.log(peopleData)
+// ageAverage(peopleData);

@@ -3,8 +3,10 @@ let arr2 = []; //stored in the second array
 let tempArr = []; //temporary array
 const peopleData = []; //
 let cvsString = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+let cvsToStr = "";
 let count = 1;
 
+// Feeling Loopy
 function parseCsv(cvsString) {
     let word = '';
 
@@ -77,15 +79,25 @@ function ageAverage(peopleData) {
     console.log("Average age is; " + avgAge);
 }
 
+function cvsToString() {
+    for(let i = 0; i < peopleData.length; i++) {
+        cvsToStr = `${peopleData[i].id},${peopleData[i].name},${peopleData[i].occupation},${peopleData[i].age}`;
+    }
+
+    console.log(cvsToStr);
+}
+
 parseCsv(cvsString);
-// console.log(arr);
+console.log(arr);
 arraySections(arr);
-// console.log(arr2);
-convertToObj(arr2);
+console.log(arr2);
+// convertToObj(arr2);
 
 
-peopleData.unshift({ id: "48", name: "Barry", occupation: "Runner", age: "25" });
-peopleData.splice(4);
-peopleData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
-console.log(peopleData)
-ageAverage(peopleData);
+// peopleData.unshift({ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+// peopleData.splice(4);
+// peopleData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+// console.log(peopleData)
+// ageAverage(peopleData);
+
+// cvsToString();

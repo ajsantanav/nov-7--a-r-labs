@@ -6,6 +6,8 @@
 // Take a number, n, and print every number between 1 and n without using loops. Use recursion.
 const arr = [10, 2, 1, 7, 30];
 
+// #############################       Addition       ###########################################
+
 // sum(arr);
 // function sum(arr) {
 //     let sum = 0
@@ -17,8 +19,11 @@ const arr = [10, 2, 1, 7, 30];
 //     return sum;
 // }
 
-// avg(arr);
 
+// #############################       Average        ###########################################
+
+
+// avg(arr);
 // function avg(arr) {
 //     let sum = 0, average = 0;
 //     for(let i = 0; i < arr.length; i++) {
